@@ -1,0 +1,224 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Eternas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff8f9;
+        }
+
+        header {
+            background-color: #ffb6c1;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #ffe4ec;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #b03060;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .productos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .producto {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 260px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .producto:hover {
+            transform: scale(1.05);
+        }
+
+        .producto img {
+            width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #ffb6c1;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="img/LOGO.JPEG" alt="Logo de Flores Eternas">
+        <h1>🌹 Flores Eternas 🌹</h1>
+        <p>Amor que nunca se marchita</p>
+    </header>
+
+ 
+    <div class="hero">
+        <h1>Regala belleza que dura para siempre</h1>
+        <p>Flores preservadas con amor y elegancia</p>
+    </div>
+
+    <section>
+        <h2>Nuestros Arreglos Más Populares</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="img/RAMO.JPEG" alt="Rosas eternas">
+                <h3>Rosas Eternas</h3>
+                <p>Hermosas rosas preservadas que duran años.</p>
+            </div>
+            <div class="producto">
+                <img src="img/CAJA.JPEG" alt="Caja floral">
+                <h3>Caja Floral</h3>
+                <p>Detalles únicos con estilo y fragancia duradera.</p>
+            </div>
+            <div class="producto">
+                <img src="img/O.JPEG" alt="Bouquet eterno">
+                <h3>Bouquet Eterno</h3>
+                <p>Perfecto para ocasiones especiales y recuerdos.</p>
+            </div>
+        </div>
+    </section>
+<center><button id="btnComentar" style="background:blue;color:white;padding:20px 40px;font-size:12px;border:none;border-radius:5px;cursor:pointer;">Comentar </button></center>
+
+<div id="cajaComentario" style="display:none;margin-top:10px;background:white;border:1px solid #ccc;padding:10px;border-radius:8px;width:1680px;">
+
+<center> <textarea id="comentario" rows="3" cols="25" placeholder="Escribe tu comentario..."></textarea><br></center>
+
+<center> <button onclick="enviarComentario()">Enviar</button></center>
+
+</div>
+<script>
+document.getElementById("btnComentar").onclick = function() { let caja = document.getElementById("cajaComentario");caja.style.display = (caja.style.display === "none") ? "block" : "none";}
+
+function enviarComentario() {  let texto = document.getElementById("comentario").value;if (texto.trim() !== "") {  alert("Comentario enviado: " + texto);document.getElementById("comentario").value = ""; } else { alert("Escribe un comentario antes de enviar."); }}
+
+</script>
+
+<button id="btnLike" style="background:#e91e63;color:white;padding:20px 30px;font-size:12px;border:none;border-radius:5px;cursor:pointer;">Like <span id="contador">0</span>
+
+</button>
+
+<script>
+
+let likes = 0;
+
+document.getElementById("btnLike").onclick = function() { likes++; document.getElementById("contador").innerText = likes; }
+
+</script>
+<body>
+<div class="contenedor">
+
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    height: 1500px;
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .boton-flotante { 
+  
+    bottom: 10px;     
+      left: 50%; 
+        transform: translateX(200%);
+    background-color: white;
+    color: white; 
+    border: none;      
+    padding: 15px 25px;  
+    border-radius: 50px; 
+    font-size: 16px;    
+    cursor: pointer;    
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  .boton-flotante:hover {
+    background-color: black;
+     scale:1.1;   
+  }
+</style>
+</head>
+<body>
+
+
+<button class="boton-flotante" >
+<a href="file:///C:/Users/DELL/OneDrive/Desktop/EXAMEN%20-BESSY%20GUTIERREZ/INDEX1.HTML ">
+ <h1>OTRAS OPCIONES</h1>
+
+</a>
+</div>
+
+    <footer>
+   <center><h2>Contáctanos</h2></center>
+    <form>
+  <a href="https://wa.me/50493861147"> 
+ <center> <img src="img/WH.jpeg" alt="CONTACTO DE WHATSAPP"width="100px"></center>
+<center><h3>PARA MAYOR INFORMACIÓN</h3></center>
+    </form>
+    </footer>
+
+</body>
+</html>
